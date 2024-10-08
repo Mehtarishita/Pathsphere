@@ -32,8 +32,14 @@
 }
 
 /* General Card Styling */
-.content-card, .offering-card, .team-card {
-    background-color: #f9f9f9;
+.content-section {
+    padding: 40px;
+    text-align: center;
+    background-color: #f4f4f4; /* Background for the whole section */
+}
+
+.content-card {
+    background-color: #e6ffe6; /* Default light green background */
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
@@ -42,9 +48,36 @@
     text-align: center;
 }
 
-.content-card:hover, .offering-card:hover, .team-card:hover {
+.content-card:nth-child(1) {
+    background-color: #d9f2d9; /* Soft green for Empowerment */
+}
+
+.content-card:nth-child(2) {
+    background-color: #ffe6e6; /* Soft red/pink for Accessibility */
+}
+
+.content-card:nth-child(3) {
+    background-color: #e6f2ff; /* Soft blue for Innovation */
+}
+
+.content-card:nth-child(4) {
+    background-color: #fff4cc; /* Soft yellow for Impact */
+}
+
+.content-card:nth-child(5) {
+    background-color: #f9e6ff; /* Soft purple for Equity */
+}
+
+.content-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Space between cards */
+    margin-top: 30px;
 }
 
 /* Specific Offering Card Styling */
